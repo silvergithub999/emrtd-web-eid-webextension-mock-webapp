@@ -1,4 +1,5 @@
 <script type="module" src="/webeid/authenticate.js"></script>
+<script type="module" src="/webeid/authenticate-with-emrtd.js"></script>
 <script type="module" src="/webeid/sign.js"></script>
 <script type="module" src="/webeid/status.js"></script>
 <script type="module" src="/webeid/extension-mock.js"></script>
@@ -141,6 +142,64 @@
     <input name="signButton" type="button" value="Sign">
 
     <textarea name="signResult" placeholder="Signing result will be here..." readonly></textarea>
+
+    <hr>
+
+    <h2>Authenticate with EMRTD</h2>
+    <table class="authenticate-with-emrtd options">
+      <tbody>
+      <tr>
+        <th colspan="2">Authentication challenge</th>
+      </tr>
+      <tr>
+        <td>GET URL</td>
+        <td><input name="getAuthWithEmrtdChallengeUrl" type="text" required></td>
+      </tr>
+      <tr>
+        <td>headers</td>
+        <td><input name="getAuthWithEmrtdChallengeHeaders" type="text"></td>
+      </tr>
+      <tr>
+        <th colspan="2">Authentication token</th>
+      </tr>
+      <tr>
+        <td>POST URL</td>
+        <td><input name="postAuthWithEmrtdTokenUrl" type="text" required></td>
+      </tr>
+      <tr>
+        <td>headers</td>
+        <td><input name="postAuthWithEmrtdTokenHeaders" type="text"></td>
+      </tr>
+      <tr>
+        <th colspan="2">Web-eID library options</th>
+      </tr>
+      <tr>
+        <td>userInteractionTimeout</td>
+        <td><input name="authWithEmrtdUserInteractionTimeout" type="text"></td>
+      </tr>
+      <tr>
+        <td>Language</td>
+        <td>
+          <select name="authWithEmrtdLanguage">
+            <option value="" selected>(not specified)</option>
+            <option value="et">et</option>
+            <option value="en">en</option>
+            <option value="ru">ru</option>
+            <option value="lt">lt</option>
+            <option value="lv">lv</option>
+            <option value="tr">tr</option>
+            <option value="xx">xx (not supported)</option>
+          </select>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+
+    <input name="authenticateWithEmrtdButton" type="button" value="Authenticate">
+
+    <textarea name="authWithEmrtdResult" placeholder="EMRTD authentication result will be here..."
+              readonly></textarea>
+
   </div>
 
   <div>
