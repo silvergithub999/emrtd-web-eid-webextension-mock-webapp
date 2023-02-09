@@ -5,8 +5,12 @@
 A Node.js/Express mock web application for testing the Web eID browser extension.
 
 ## Setup
+1. This project requires the `web-eid.js` library - in this case with the EMRTD modifications.
+   The path in the `package.json` points to `../web-eid-webextension/lib/web-eid.js`.
+   So either the `web-eid-webextension` project with the EMRTD modifications needs to be cloned as well or just clone the `web-eid.js`
+   library and change the `@web-eid/web-eid-library` to point to the `web-eid.js` library.
 
-1. Install the latest LTS version of Node.js - [https://nodejs.org](https://nodejs.org)
+2. Install the latest LTS version of Node.js - [https://nodejs.org](https://nodejs.org)
     - **Windows:** Install Node.js via the official installer.
     - **Linux and MacOS:**
       - **Option 1:** Install Node.js and NPM via the official Node.js installer and optionally configure NPM global package path manually.
